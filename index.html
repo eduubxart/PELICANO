@@ -1,110 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Pelicano</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pelicano</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <header class="top-browser">
+    <div class="browser-dot red"></div>
+    <div class="browser-dot yellow"></div>
+    <div class="browser-dot green"></div>
+    <div class="browser-bar"></div>
+    <div class="browser-mini"></div>
+    <div class="browser-mini"></div>
+  </header>
 
-    <!-- HEADER -->
-    <header>
-        <h1>🦤 Projeto Pelicano</h1>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="pages/conteudo.html">Conteúdo</a>
-            <a href="pages/quiz.html">Quiz</a>
-            <a href="pages/formulario.html">Formulário</a>
-        </nav>
-    </header>
-<section class="carrossel">
-
-    <div class="slide ativo">
-        <img src="assets/img/noticias/agua1.jpg">
-        <div class="texto">
-            <h2>💧 Você sabe quanta água gasta por dia?</h2>
-            <p>Descubra agora no nosso quiz</p>
-            <a href="pages/quiz.html" class="btn">Fazer Quiz</a>
-        </div>
+  <nav class="navbar">
+    <div class="brand">
+      <img src="../assets/img/logo.png" alt="Logo Pelicano">
+      <span>PELICANO</span>
     </div>
 
-    <div class="slide">
-        <img src="assets/img/noticias/agua2.jpg">
-        <div class="texto">
-            <h2>🌍 O desperdício de água cresce no Brasil</h2>
-            <p>Veja dados reais</p>
-            <a href="pages/conteudo.html" class="btn">Ver Conteúdo</a>
-        </div>
-    </div>
+    <ul class="menu">
+      <li><a href="#noticias">Portal de Notícias</a></li>
+      <li><a href="#jogos">Jogos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
 
-    <div class="slide">
-        <img src="assets/img/noticias/agua3.jpg">
-        <div class="texto">
-            <h2>🚨 Seu hábito pode estar errado</h2>
-            <p>Descubra como melhorar</p>
-            <a href="pages/formulario.html" class="btn">Responder</a>
-        </div>
-    </div>
+    <a href="#contato" class="insta-icon" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+        <circle cx="12" cy="12" r="4"></circle>
+        <circle cx="17.5" cy="6.5" r="1"></circle>
+      </svg>
+    </a>
+  </nav>
 
-    <!-- SETAS -->
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+  <main>
+    <section class="hero section-panel">
+      <div class="hero-bg"></div>
+      <canvas id="waterCanvas"></canvas>
 
-    <!-- BOLINHAS -->
-    <div class="dots">
-        <span class="dot ativo"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
+      <div class="hero-content reveal">
+        <h1>“Preservando<br>gotas do Futuro”</h1>
+      </div>
 
-</section>
-    <!-- BANNER -->
-    <section class="banner">
-        <h2>Conscientização da Água</h2>
-        <p>Pequenas atitudes salvam grandes recursos 💧</p>
+      <a href="#noticias" class="hero-btn reveal">Saiba mais</a>
     </section>
 
-    <!-- SOBRE -->
-    <section class="sobre">
-        <h2>Sobre o Projeto</h2>
-        <p>
-            O Projeto Pelicano tem como objetivo analisar o comportamento das pessoas
-            em relação ao uso da água e incentivar mudanças através da informação.
-        </p>
-    </section>
+    <section id="noticias" class="news-section section-panel reveal">
+      <h2 class="section-title">NOTÍCIAS RECENTES</h2>
 
-    <!-- DESTAQUES -->
-    <section class="destaques">
-        <h2>Destaques</h2>
-
-        <div class="cards">
-            <div class="card">
-                <h3>💧 Consumo de Água</h3>
-                <p>Descubra quanto você consome no dia a dia.</p>
+      <div class="news-layout">
+        <div class="news-left">
+          <div class="news-card tall">
+            <img src="../assets/img/noticias/agua1.jpg" alt="Notícia sobre água">
+            <div class="news-card-text">
+              Um banho de 15 minutos com chuveiro elétrico consome cerca de 45 litros de água, enquanto um banho de ducha pode gastar até 135 litros, superando os 120 litros em apenas 10 minutos.
             </div>
+          </div>
 
-            <div class="card">
-                <h3>🧠 Comportamento</h3>
-                <p>Entenda seus hábitos e como melhorá-los.</p>
-            </div>
-
-            <div class="card">
-                <h3>📊 Análise</h3>
-                <p>Veja dados e gráficos sobre o uso da água.</p>
-            </div>
+          <div class="news-card tall">
+            <img src="../assets/img/noticias/agua2.jpg" alt="Pôr do sol na água">
+          </div>
         </div>
+
+        <div class="news-right">
+          <div class="news-box">
+            <p>
+              Artigos e notícias conscientizantes, interessantes e divertidas para aqueles
+              que procuram um planeta sustentável e agradável.<br><br>
+              Escrito e postado todo mês por nossos jovens colunistas.
+            </p>
+          </div>
+
+          <a href="#portal" class="gradient-btn">Ver portal de notícias</a>
+        </div>
+      </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Projeto Pelicano</p>
-    </footer>
+    <section id="time" class="team-section section-panel reveal">
+      <h2 class="section-title">NOSSO TIME</h2>
 
-    <!-- JS -->
-    <script src="js/main.js"></script>
-    <script src="js/carrossel.js"></script>
+      <div class="team-slider">
+        <button class="team-arrow left" id="teamPrev" aria-label="Anterior">&#10094;</button>
+
+        <div class="team-track-wrapper">
+          <div class="team-track" id="teamTrack">
+            <article class="team-card">
+              <img src="../assets/img/equipe/pessoa1.jpg" alt="Pessoa 1">
+              <h3>Fulano tal 1</h3>
+              <p>Função no grupo</p>
+            </article>
+
+            <article class="team-card">
+              <img src="../assets/img/equipe/pessoa2.jpg" alt="Pessoa 2">
+              <h3>Fulano tal 2</h3>
+              <p>Função no grupo</p>
+            </article>
+
+            <article class="team-card">
+              <img src="../assets/img/equipe/pessoa3.jpg" alt="Pessoa 3">
+              <h3>Fulano tal 3</h3>
+              <p>Função no grupo</p>
+            </article>
+
+          <article class="team-card">
+              <img src="../assets/img/equipe/pessoa4.jpg" alt="Pessoa 4">
+              <h3>Fulano tal 4</h3>
+              <p>Função no grupo</p>
+            </article>
+
+            <article class="team-card">
+              <img src="../assets/img/equipe/pessoa5.jpg" alt="Pessoa 5">
+              <h3>Fulano tal 5</h3>
+              <p>Função no grupo</p>
+            </article>
+
+            <article class="team-card">
+              <img src="../assets/img/equipe/pessoa6.jpg" alt="Pessoa 6">
+              <h3>Fulano tal 6</h3>
+              <p>Função no grupo</p>
+            </article>
+
+            <article class="team-card">
+              <img src="../assets/img/equipe/pessoa7.jpg" alt="Pessoa 7">
+              <h3>Fulano tal 7</h3>
+              <p>Função no grupo</p>    
+                 </article>
+
+            <article class="team-card">
+              <img src="../assets/img/equipe/pessoa8.jpg" alt="Pessoa 8">
+              <h3>Fulano tal 8</h3>
+              <p>Função no grupo</p>
+              </article>
+             </div>
+          </div>
+        </div>
+
+        <button class="team-arrow right" id="teamNext" aria-label="Próximo">&#10095;</button>
+      </div>
+
+      <div class="team-footer" id="contato">
+        <div class="team-logo-block">
+          <img src="../assets/img/logo.png" alt="Logo Pelicano">
+          <span>PELICANo</span>
+        </div>
+
+        <div class="contact-block">
+          <h3>Contatos:</h3>
+          <p>Instagram: Agua_Gulosa69</p>
+          <p>Email: Agua_Gulosa69@gmail.com</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="jogos" class="games-section section-panel reveal">
+      <h2 class="section-title games-title">JOGOS INTERATIVOS</h2>
+
+      <div class="games-grid">
+        <article class="game-card">
+          <img src="../assets/img/jogos/jogo1.jpg" alt="Jogo 1">
+          <div class="game-overlay">
+            <a href="#" class="play-btn">JOGAR</a>
+          </div>
+        </article>
+
+        <article class="game-card">
+          <img src="../assets/img/jogos/jogo2.jpg" alt="Jogo 2">
+          <div class="game-overlay">
+            <a href="#" class="play-btn">JOGAR</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="portal" class="portal-section section-panel reveal">
+      <div class="portal-left">
+        <h2>PORTal de<br>Notícias</h2>
+      </div>
+
+      <div class="portal-right">
+        <div class="portal-grid">
+          <img class="big-top" src="../assets/img/noticias/agua3.jpg" alt="Portal 1">
+          <img class="small-left" src="../assets/img/noticias/agua4.jpg" alt="Portal 2">
+          <img class="small-bottom" src="../assets/img/noticias/agua5.jpg" alt="Portal 3">
+          <img class="big-right" src="../assets/img/noticias/agua6.jpg" alt="Portal 4">
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section section-panel reveal">
+      <div class="faq-header">
+        <h2>FAQ</h2>
+        <p>• Perguntas Frequentes</p>
+      </div>
+
+      <div class="faq-grid">
+        <article class="faq-card">
+          <h3>O Brasil realmente tem problema de água?</h3>
+          <p>Tem. Mesmo sendo rico em água, a distribuição é desigual e o desperdício é absurdo.</p>
+        </article>
+
+        <article class="faq-card">
+          <h3>A água do planeta pode acabar?</h3>
+          <p>Não literalmente, mas pode faltar água potável acessível — e isso já acontece em várias regiões.</p>
+        </article>
+
+        <article class="faq-card">
+          <h3>Deixar a torneira ligada por muito tempo faz diferença?</h3>
+          <p>Sim, pode chegar a desperdiçar milhares de litros por ano.</p>
+        </article>
+
+        <article class="faq-card">
+          <h3>Qual é o maior desperdício dentro de casa?</h3>
+          <p>Banho longo e lavagem de calçada com mangueira.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/main.js"></script>
 </body>
 </html>
